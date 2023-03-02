@@ -1,0 +1,38 @@
+/* There are three main ways to bring in fonts to the project:
+    1. Use a system font / font stack (something the user already has on their machine).
+    2. Use an online font library (such as google fonts).
+    3. Use a custom, self-hosted font *note this is not the best option for mobile. */ 
+/* You must path to the font folder*/
+@font-face {
+    font-family: 'typewriter';
+    src: url('../fonts/veteran_typewriter_regular-webfont.woff2') format('woff2'),
+            url('../fonts/veteran_typewriter_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    /*This is important to include for performance reasons*/
+    font-display: swap;
+}
+    
+
+body {
+    /* Base, paragraph font stlying on the body here. */
+    font-family: Courier New, Courier, Lucida Sans, Sans Typewriter, Lucida Typewriter, monospace;
+    font-family: 'typewriter', Courier New, monospace;
+    background-color: #dedcda;
+}
+
+h2 {
+    color: #3b373f;
+    font-family: 'Beth Ellen', cursive;
+}
+
+section {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+    /* When rotating the flex container, the justify-content and align-items also rotate.*/
+    justify-content: center;
+    align-items: center;
+}
